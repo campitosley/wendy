@@ -19,8 +19,20 @@ body {
     src:url(../font/Caviar_Dreams_Bold.ttf);
 }
 #logo{
-    position: relative;
-    top:20px;
+ 
+    margin: 0 auto;
+    position: absolute;
+    top:10px;
+    left:0;
+    right:0;
+    z-index: 120;
+    
+}
+#logo img{
+    border-radius: 7px;
+}
+#privacidad{
+  float:right;   
 }
 
 h1{
@@ -46,7 +58,7 @@ p{
 }
 
 .navbar-default{
-    background: #2a6496;
+    background: #002161;
     color: white;
 }
 .navbar-toggle{
@@ -56,16 +68,16 @@ p{
   
 }
 .navbar-toggle:focus{
-    background-color: #2a6496 ;
+    background-color: #002161 ;
   background-image: none;
-  border: 1px solid  #2a6496;
+  border: 1px solid  #002161;
 }
 .icon-bar{
      color:white;
 }
 .navbar-default {
-    background-color:  #025687;
-  border-color: #2a6496;
+    background-color:  #002161;
+  border-color: #002161;
 }
 .navbar-default .navbar-brand {
   color: white;
@@ -99,7 +111,7 @@ p{
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #2a6496;
+  border-color: #002161;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -110,7 +122,7 @@ p{
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color:  #2a6496;
+  border-color:  #002161;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -143,19 +155,15 @@ p{
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
   position: absolute;
-  top: 100px;
+  top: 320px;
   left: 0;
   right: 0;
   z-index: 20;
 }
-#logo{
-    position:absolute;
-   margin: 0 auto;
-   width:303px;
-    top:5px;
-    left:0;
-    right:0;
-    z-index:21;
+
+
+#navegacion-borde{
+   border-image:  url(margen.png);
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -174,7 +182,7 @@ p{
 
 /* Carousel base class */
 .carousel {
-  height: 800px;
+  height: 900px;
   margin-bottom: 60px;
   padding-top: -60px;
    left: 0 !important;
@@ -193,7 +201,7 @@ p{
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 800px;
+  height: 900px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -201,7 +209,7 @@ p{
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 800px;
+  height: 900px;
 }
 
 
@@ -344,7 +352,7 @@ p{
     background: rgba(12,57,84,0.7);
     border-radius: 30px;
     height:200px;
-    margin-bottom: 60%;
+    margin-bottom: 20%;
     border-right:none;   
     padding: 17px;
 
@@ -352,7 +360,7 @@ p{
    
 }
 #servicio2{
-    margin-bottom:40%;
+    margin-bottom:60%;
 }
 
 li{
