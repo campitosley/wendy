@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Shotcrete México, contacto</title>
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <!-- formulario -->
+        <input type="text" id="nombre" placeholder="Nombre" >
+        <input id="enviar" class="btn btn-primary" type="button" value="Enviar comentario"   >
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/docs.min.js"></script>
+    <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script>
+        
+        
+    $(document).ready(function(){
+        
+        
+        $("#enviar").click(function(){
+        //Procesando formulario de contacto
+        $.ajax({
+            type:'post',
+            url:'contacto.php',
+            data:{
+               nombre:$("#nombre").val() 
+            },
+            success:function(respuesta){
+              //  alert(respuesta);
+              $("#resultado").html(respuesta);
+              $("#myModal").modal("show");
+            }
+            
+        });
+        
+    });
+        
+    
+        $("#hoteles").click(function(){
+        $.scrollTo($("#informacion-hoteles"),800);
+        });
+     
+    });
+    </script>
+    
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Correo ennviado</h4>
+      </div>
+      <div class="modal-body">
+          <div id="resultado"></div>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+     <!--   <button type="button" class="btn btn-primary">Ce</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+    </body>
+</html>
