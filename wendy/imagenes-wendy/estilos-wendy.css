@@ -70,7 +70,7 @@ p{
 .navbar-toggle:focus{
     background-color: #002161 ;
   background-image: none;
-  border: 1px solid  #002161;
+  border: 1px solid  #002161; 
 }
 .icon-bar{
      color:white;
@@ -186,11 +186,7 @@ p{
   margin-bottom: 60px;
   padding-top: -60px;
    left: 0 !important;
-      -webkit-transition: opacity .4s; /*adjust timing here */
-         -moz-transition: opacity .4s;
-           -o-transition: opacity .4s;
-              transition: opacity .4s;
-
+      
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -203,6 +199,25 @@ p{
 .carousel .item {
   height: 900px;
   background-color: #777;
+left: 0 !important;
+      -webkit-transition: opacity .9s; /*adjust timing here */
+         -moz-transition: opacity .9s;
+           -o-transition: opacity .9s;
+              transition: opacity .9s;
+}
+.carousel-control {
+    background-image: none !important; /* remove background gradients on controls */
+}
+/* Fade controls with items */
+.next.left,
+.prev.right {
+    opacity: 1;
+    z-index: 1;
+}
+.active.left,
+.active.right {
+    opacity: 0;
+    z-index: 2;
 }
 .carousel-inner > .item > img {
   position: absolute;
