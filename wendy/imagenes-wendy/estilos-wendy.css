@@ -502,6 +502,21 @@ filter:alpha(opacity=40); /* For IE8 and earlier
     border-right:none;   
     padding: 17px;  
 }
+#tuitersin{
+   /* background: rgba(255,255,255,0.7);*/
+    border-radius: 70px;
+    margin-right: -70px;
+   font-size: 20px;
+    width:501px;
+    color:white;
+    height:244px;
+    position:absolute;
+    right:70px;
+    top:330px;
+    border-right:none;   
+    padding: 17px;     
+    margint-right:70px;
+}
 
 #servicio-mision p, h3{
     padding-top: 52px;
