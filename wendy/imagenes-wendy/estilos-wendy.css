@@ -18,6 +18,11 @@ body {
     font-family:yo3;
     src:url(../font/Caviar_Dreams_Bold.ttf);
 }
+
+@font-face{
+    font-family: life1;
+    src:url(lifesupb.ttf);
+}
 #logo{
  
     margin: 0 auto;
@@ -155,11 +160,49 @@ p{
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
   position: absolute;
-  top: 320px;
+  top: 245px;
   left: 0;
   right: 0;
   z-index: 20;
 }
+
+.navegacion{
+    position: absolute;
+  top: 260px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  width:1267px;
+  height:26px;
+  margin:3px auto;
+  background: #282864;
+}
+.navegacion li{
+    display:inline;
+    margin-left: 17px;
+}
+li img{
+    background: white;
+}
+#contacto a{
+    background-image: url(contactoA.jpg);
+}
+#raya{
+    position:absolute;
+    top:290px;
+    left: 0;
+  right: 0;
+  z-index: 20;
+  width:1267px;
+  height:3px;
+  margin:3px auto;
+  background: #282864;
+    
+}
+#contacto a:hover{
+    background-image: url(contactoB.jpg);
+}
+
 
 
 #navegacion-borde{
@@ -354,7 +397,7 @@ left: 0 !important;
     margin-top: -90px;
 }
 #inferior{
-    width:400px;
+    width:270px;
     position: relative;
     height:100px;
   //  background: #3c763d;
@@ -362,20 +405,165 @@ left: 0 !important;
     margin-top:-300px;
 }
 
+#anclaje-perforacion{
+    position:  absolute;
+    top:340px;
+    left:180px;
+    width:600px;
+    height:260px;
+   
+    
+}
 
+#anclaje-perforacion a{
+    color:rgb(40,40,100);
+      font-size: 20px;
+      font-weight:  bolder;
+    
+      
+}
+#misionsita{
+    position:  absolute;
+    top:100px;
+    left:40px;
+    width:580px;
+    height:260px;
+         -ms-transform: rotate(-90deg); /* IE 9 */
+-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+transform: rotate(-90deg);
+
+   
+    
+}
+
+#misionsita a{
+    color:rgb(40,40,100);
+      font-size: 40px;
+      font-weight:  bolder;
+    
+      
+}
+.life{
+     font-family: life1;
+     text-decoration:  underline;
+     font-size: 30px;
+     font-weight: bolder;
+
+}
+
+.item img{
+    /*
+   opacity:0.4;
+filter:alpha(opacity=40); /* For IE8 and earlier 
+*/
+}
 #servicio1{
-    background: rgba(12,57,84,0.7);
-    border-radius: 30px;
+    background: rgba(40,40,100,0.7);
+    border-radius: 70px;
+    margin-left: -70px;
+   font-size: 20px;
+    width:701px;
+    color:white;
     height:200px;
-    margin-bottom: 20%;
+    position:absolute;
+    left:0;
+    top:480px;
     border-right:none;   
-    padding: 17px;
+    padding-top: -20px;  
+    padding-left: 17px;
+    padding-right: 17px;
+}
 
-   
-   
+#servicio1 p{
+    padding-left: 70px;
+}
+#anclajito{
+    padding-left: 70px;
+    padding-top: 7px;
+}
+
+#servicio1 h3{
+     padding-left: 70px;
 }
 #servicio2{
     margin-bottom:60%;
+}
+#servicio-mision{
+    background: rgba(255,255,255,0.7);
+    border-radius: 70px;
+    margin-right: -70px;
+   font-size: 20px;
+    width:701px;
+    color:white;
+    height:244px;
+    position:absolute;
+    right:0;
+    top:330px;
+    border-right:none;   
+    padding: 17px;  
+}
+
+#servicio-mision p, h3{
+    padding-top: 52px;
+    padding-right: 70px;
+    padding-left: 10px;
+}
+
+#servicio-mision p{
+   font-family: yo3;
+   font-size: 24px; 
+    color:rgb(40,40,100);
+   text-align:  justify;
+}
+
+#servicio-formulario{
+  background: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    margin-right: -70px;
+   font-size: 20px;
+    width:701px;
+    color:white;
+    height:430px;
+    position:absolute;
+    left:370px;
+ 
+    top:320px;
+    border-right:none;   
+    padding: 17px;  
+}
+#servicio-formulario h2{
+    text-align: center;
+    color:#080808;
+}
+#servicio-formulario p{
+    text-align: center;
+    color: #0f0f0f;
+}
+.campo{
+    width:280px;
+}
+#enviar{
+     float:right;
+     margin-top: 140px;
+}
+.redes{
+    padding: 0;
+    margin-top: 0;
+    float:right;
+    margin-left:5px;
+    margin-right:7px;
+    color:white;
+}
+table{
+     text-align: justify;
+     padding-left: 30px;
+}
+td{
+    width:190px;
+    color:#888;
+    margin:5px;
+    padding-top: 5px;
+    font-size: 13px;
 }
 
 li{
@@ -397,6 +585,20 @@ li{
     height:40px;
     color:#f8c303;
     font-size:16px;
+}
+#pie{
+    position: absolute;
+    left: 0;
+  right: 0;
+  z-index: 20;
+    top:823px;
+    width:1267px;
+    height: 60px;
+    margin:0 auto;
+    text-align:  center;
+    color:#002161;
+    font-weight: bolder;
+  
 }
 #primero{
    

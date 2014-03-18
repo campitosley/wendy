@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -6,26 +7,115 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Shotcrete México, contacto</title>
+        <title>Shotcrete México</title>
         <meta charset="UTF-8">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    
+       <link rel="stylesheet" href="imagenes-wendy/estilos-wendy.css">
     </head>
     <body>
-        <!-- formulario -->
-        <input type="text" id="nombre" placeholder="Nombre" >
-        <input id="enviar" class="btn btn-primary" type="button" value="Enviar comentario"   >
+           <!-- NAVBAR
+================================================== -->
+     <div id="logo">
+                   <center>  <img  src="imagenes-wendy/encabezado2.png" ></center>
+               </div>
+    <div class="navegacion">
+               <ul>
+                   <li><a href="index.html"><img src="imagenes-wendy/inicioA.jpg" onmouseover="this.src='imagenes-wendy/inicioB.jpg'" onmouseout="this.src=' imagenes-wendy/inicioA.jpg '"  /></a></li>  
+                   <li><a href="mision.html"><img src="imagenes-wendy/misionA.jpg" onmouseover="this.src='imagenes-wendy/misionB.jpg'" onmouseout="this.src=' imagenes-wendy/misionA.jpg '"  /></a></li>
+                   <li><a href="contacto.html"><img src="imagenes-wendy/contactoB.jpg" onmouseover="this.src='imagenes-wendy/contactoA.jpg'" onmouseout="this.src=' imagenes-wendy/contactoB.jpg '"  /></a></li>
+                   <li><a href="galeria.html"><img src="imagenes-wendy/galeriaA.jpg" onmouseover="this.src='imagenes-wendy/galeriaB.jpg'" onmouseout="this.src=' imagenes-wendy/galeriaA.jpg '"  /></a></li>
+                  <li><a href=""><span class="redes">Aviso de Privacidad</span></a></li>
+                   <li><a href="" ><img class="redes" src="imagenes-wendy/facebook.png"></a></li>
+                  <li><a href=" " ><img class="redes" src="imagenes-wendy/twitter.png"></a></li>
+               </ul>
+           </div>
+ <!--  termina navegacion   -->
+ 
+ <!-- Inicia pleca  -->
+
+ <!-- Carrusel -->
+<!-- Carrusel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      
+      <div class="carousel-inner">
+        <div class="item active">
+            <img src="imagenes-wendy/inicial.JPG" class="img-responsive" alt="First slide">
+          <div class="container">
+              <div class="carousel-caption">
+              <div class="row">
+                  <div class="col-md-6">
+                      
+                      
+                  </div>
+                  <div class="col-md-6">
+                       
+                  </div>
+              </div> 
+              </div>
+            
+          </div>
+        </div>
         
+        
+      </div>
+    
+    </div>
+<!-- /.carrusel -->
+<!-- -->
+
+<!--Pleca - -->
+<div id="servicio-formulario">
+ <!-- formulario -->
+ <h2>Shotcrete de México S.A. de C.V.</h2>
+ <p>Tels:01(55)5361-0078 // 01(55)5398-1988</p>
+ <p>Fax:01(55)5362-0516</p>
+ <a id="enviar" class="btn btn-lg btn-primary"> Enviar</a>
+ <table>
+     
+       <tr>
+         <td>Nombre:</td><td> <input class="campo" type="text" id="nombre" placeholder="Nombre" ></td>
+       </tr>
+       <tr>
+         <td>Empresa:</td><td> <input class="campo" type="text" id="empresa" placeholder="Empresa" ></td>
+       </tr>
+       <tr>
+         <td>Correo Electrónico:</td><td> <input class="campo" type="text" id="email" placeholder="E-mail" ></td>
+       </tr>
+       <tr>
+         <td>Asunto:</td><td> <input class="campo" type="text" id="asunto" placeholder="Asunto" ></td>
+       </tr>
+       <tr>
+         <td>Mensaje:</td>
+         <td>
+         <textarea id="mensaje" rows="4" cols="40">
+         </textarea></td>
+       </tr>
+      
+              </table>     
+    
+                      </div>
+
+
+<!-- PIE   -->
+<div id="pie">
+    <center>   <img src="imagenes-wendy/linea-pie.jpg">
+        <p>2014 Todos los derechos reservados Shotcrete de México S.A. de C.V.</p>
+    </center>
+               
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/docs.min.js"></script>
     <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+   
     <script>
         
         
     $(document).ready(function(){
-        
+     
         
         $("#enviar").click(function(){
         //Procesando formulario de contacto
@@ -33,7 +123,12 @@ and open the template in the editor.
             type:'post',
             url:'contacto.php',
             data:{
-               nombre:$("#nombre").val() 
+               nombre:$("#nombre").val(),
+               email:$("#email").val(),
+               asunto:$("#asunto").val(),
+               empresa:$("#empresa").val(),
+               mensaje:$("#mensaje").val()
+               
             },
             success:function(respuesta){
               //  alert(respuesta);
@@ -46,9 +141,7 @@ and open the template in the editor.
     });
         
     
-        $("#hoteles").click(function(){
-        $.scrollTo($("#informacion-hoteles"),800);
-        });
+       
      
     });
     </script>
@@ -59,7 +152,7 @@ and open the template in the editor.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Correo ennviado</h4>
+        <h4 class="modal-title" id="myModalLabel">Correo</h4>
       </div>
       <div class="modal-body">
           <div id="resultado"></div>

@@ -1,5 +1,8 @@
 <?php
 $nombre=$_POST['nombre'];
+$to=$_POST['email'];
+$asunto_completo='Has recibido un mensaje de la pagina shotcretemexico enviado por un cliente interesado. '. "\r\n"
+        .'; El mensaje enviado es de: Mensaje enviado por: '.$_POST['email'].' El asunto es: '.$_POST['asunto'].'  De la empresa: '.$_POST['empresa']. ' con el siguiente mensaje: '.$_POST['mensaje'];
 /*
  * CASO 1 MAIL
 
@@ -33,31 +36,23 @@ mail($to, $subject, $message, $headers);
  * 
  * CASO 3 EL MEJOR
  */
-$to  = 'jcampos@mexico-movil.com' . ', '; // note the comma
-$to .= 'rapidclimate@gmail.com';
+
+
 
 // subject
-$subject = 'Birthday Reminders for August';
+$subject = 'Shotcrete México S.A. de C.V.';
 
 // message
 $message = '
 <html>
 <head>
-  <title>Birthday Reminders for August</title>
+  <title></title>
 </head>
 <body>
-  <p>Here are the birthdays upcoming in August!</p>
-  <table>
-    <tr>
-      <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
-    </tr>
-    <tr>
-      <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
-    </tr>
-    <tr>
-      <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
-    </tr>
-  </table>
+<center><h1>Shotcrete Mexico S.A. de C.V. </h2>
+  <p>Gracias por contactarnos!!!</p>
+  <p>En breve nos pondremos en contacto contigo</p>
+  </center>
 </body>
 </html>
 ';
@@ -67,14 +62,20 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 // Additional headers
-$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-$headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
-$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
+$headers .= 'From: Shotcrete Mexico S.A. de C.V. <contacto@shotcretemexico.com>' . "\r\n";
+$headers .= 'Cc: contacto@shotcretemexico.com' . "\r\n";
+$headers .= 'Bcc: contacto@shotcretemexico.com' . "\r\n";
 
 // Mail it
 mail($to, $subject, $message, $headers);
 
+
+
+
+//Correo para shotcrete
+
+mail('contacto@shotcretemexico.com','Ha escrito un cliente!!',$asunto_completo,$headers);
+mail('rapidclimate@gmail.com','Ha escrito un cliente!!',$asunto_completo,$headers);
 echo 'Correo enviado con exito  '.$nombre;
 /*printf("Correo enviado con exito!");*/
 
